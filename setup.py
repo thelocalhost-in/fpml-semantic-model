@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 import os
 
-# Utility function to read the README file.
+# Utility function to read the README file and update.
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
     name='fpml-semantic-model',
-    version='0.1.0',
+    version='0.1.1',
     author='TheLocalHost',
     author_email='thelocalhost.in@gmail.com',
     description='A semantic search and structural analysis model for FpML XSD schemas.',
