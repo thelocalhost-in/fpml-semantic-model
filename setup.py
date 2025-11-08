@@ -7,7 +7,7 @@ def read(fname):
 
 setup(
     name='fpml-semantic-model',
-    version='0.1.1',
+    version='0.1.2',
     author='TheLocalHost',
     author_email='thelocalhost.in@gmail.com',
     description='A semantic search and structural analysis model for FpML XSD schemas.',

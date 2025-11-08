@@ -90,10 +90,3 @@ jobs:
       # This step uses the official PyPI action for secure uploading
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          username: __token__
-          # This secret must be created in your GitHub Repository settings
-          # and must contain the token generated on the live PyPI site (https://pypi.org/)
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          # Use Twine to upload all files in the dist/ folder
-          # repository-url: (defaults to PyPI production)
