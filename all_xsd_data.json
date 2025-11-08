@@ -1,0 +1,2819 @@
+{
+    "fpml-asset-5-12.xsd": {
+        "file": "fpml-asset-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "basket",
+                "type": "Basket",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines the underlying asset when it is a basket."
+            },
+            {
+                "name": "bond",
+                "type": "Bond",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies the underlying asset when it is a series or a class of bonds."
+            },
+            {
+                "name": "cash",
+                "type": "Cash",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a simple underlying asset type that is a cash payment. Used for specifying discounting factors for future cash flows in the pricing and risk model."
+            },
+            {
+                "name": "commodity",
+                "type": "Commodity",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies the underlying asset when it is a listed commodity."
+            },
+            {
+                "name": "convertibleBond",
+                "type": "ConvertibleBond",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies the underlying asset when it is a convertible bond."
+            },
+            {
+                "name": "curveInstrument",
+                "type": "Asset",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines the underlying asset when it is a curve instrument."
+            },
+            {
+                "name": "deposit",
+                "type": "Deposit",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a simple underlying asset that is a term deposit."
+            },
+            {
+                "name": "equity",
+                "type": "EquityAsset",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies the underlying asset when it is a listed equity."
+            },
+            {
+                "name": "exchangeTradedFund",
+                "type": "ExchangeTradedFund",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies the underlying asset when it is an exchange-traded fund."
+            },
+            {
+                "name": "future",
+                "type": "Future",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies the underlying asset when it is a listed future contract."
+            },
+            {
+                "name": "fx",
+                "type": "FxRateAsset",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a simple underlying asset type that is an FX rate. Used for specifying FX rates in the pricing and risk model."
+            },
+            {
+                "name": "index",
+                "type": "Index",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies the underlying asset when it is a financial index."
+            },
+            {
+                "name": "loan",
+                "type": "Loan",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a simple underlying asset that is a loan."
+            },
+            {
+                "name": "mortgage",
+                "type": "Mortgage",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a mortgage backed security."
+            },
+            {
+                "name": "mutualFund",
+                "type": "MutualFund",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies the class of unit issued by a fund."
+            },
+            {
+                "name": "option",
+                "type": "ExchangeTradedOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies the underlying asset when it is a listed option contract."
+            },
+            {
+                "name": "rateIndex",
+                "type": "RateIndex",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a simple underlying asset that is an interest rate index. Used for specifying benchmark assets in the market environment in the pricing and risk model."
+            },
+            {
+                "name": "security",
+                "type": "GenericSecurity",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a security of implicit type (derivable from the security reference data)."
+            },
+            {
+                "name": "simpleCreditDefaultSwap",
+                "type": "SimpleCreditDefaultSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a simple underlying asset that is a credit default swap."
+            },
+            {
+                "name": "simpleFra",
+                "type": "SimpleFra",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a simple underlying asset that is a forward rate agreement."
+            },
+            {
+                "name": "simpleIrSwap",
+                "type": "SimpleIRSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Identifies a simple underlying asset that is a swap."
+            },
+            {
+                "name": "underlyingAsset",
+                "type": "Asset",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Define the underlying asset, either a listed security or other instrument."
+            },
+            {
+                "name": "warrant",
+                "type": "ExchangeTradedContract",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines the underlying asset when it is a warrant."
+            }
+        ]
+    },
+    "fpml-bond-option-5-12.xsd": {
+        "file": "fpml-bond-option-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "bondOption",
+                "type": "BondOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A component describing a Bond Option product."
+            }
+        ]
+    },
+    "fpml-business-events-5-12.xsd": {
+        "file": "fpml-business-events-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "additionalEvent",
+                "type": "AdditionalEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The additionalEvent element is an extension/substitution point to customize FpML and add additional events."
+            },
+            {
+                "name": "basketChange",
+                "type": "BasketChangeEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Describes a change due to change in composition of basket underlyer"
+            },
+            {
+                "name": "changeEvent",
+                "type": "ChangeEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Abstract substitutable place holder for specific change details."
+            },
+            {
+                "name": "corporateAction",
+                "type": "CorporateActionEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Describes a change due to a corporate action"
+            },
+            {
+                "name": "indexChange",
+                "type": "IndexChange",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Describes a change due to an index component being adjusted."
+            }
+        ]
+    },
+    "fpml-cd-5-12.xsd": {
+        "file": "fpml-cd-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "creditDefaultSwap",
+                "type": "CreditDefaultSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "In a credit default swap one party (the protection seller) agrees to compensate another party (the protection buyer) if a specified company or Sovereign (the reference entity) experiences a credit event, indicating it is or may be unable to service its debts. The protection seller is typically paid a fee and/or premium, expressed as an annualized percent of the notional in basis points, regularly over the life of the transaction or otherwise as agreed by the parties."
+            },
+            {
+                "name": "creditDefaultSwapOption",
+                "type": "CreditDefaultSwapOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An option on a credit default swap."
+            }
+        ]
+    },
+    "fpml-clearing-processes-5-12.xsd": {
+        "file": "fpml-clearing-processes-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "requestClearingEligibility",
+                "type": "RequestClearingEligibility",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "clearingEligibility",
+                "type": "ClearingEligibility",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "clearingEligibilityException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "clearingEligibilityAcknowledgement",
+                "type": "Acknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    },
+    "fpml-com-5-12.xsd": {
+        "file": "fpml-com-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "bullionPhysicalLeg",
+                "type": "BullionPhysicalLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The physical leg of a Commodity Forward Transaction for which the underlyer is Bullion."
+            },
+            {
+                "name": "coalPhysicalLeg",
+                "type": "CoalPhysicalLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Physically settled coal leg."
+            },
+            {
+                "name": "commodityBasketOption",
+                "type": "CommodityBasketOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines a commodity basket option product."
+            },
+            {
+                "name": "commodityDigitalOption",
+                "type": "CommodityDigitalOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines a commodity digital option product."
+            },
+            {
+                "name": "commodityForward",
+                "type": "CommodityForward",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines a commodity forward product."
+            },
+            {
+                "name": "commodityForwardLeg",
+                "type": "CommodityForwardLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines the substitutable commodity forward leg."
+            },
+            {
+                "name": "commodityInterestLeg",
+                "type": "CommodityInterestLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the fixed payments of a commodity performance swap. Sometimes also referred to as the fee."
+            },
+            {
+                "name": "commodityOption",
+                "type": "CommodityOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines a commodity option product. The product support for financially-settled exercises or exercise into physical forward contracts written on precious and non-precious metals. options in FpML is based on the creation of a 'commodityOption' product. The product references the 'commodity' underlyer in order to support the underlying asset of the option."
+            },
+            {
+                "name": "commodityPerformanceSwap",
+                "type": "CommodityPerformanceSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A swap the payoff of which is linked to the performance of the underlying asset. Examples of potential performance features are return, correlation, covariance, variance and volatility."
+            },
+            {
+                "name": "commodityPerformanceSwapLeg",
+                "type": "CommodityPerformanceSwapLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A placeholder within 'commodityPerformanceSwap' structure for the actual commodity swap legs (e.g. 'commodityReturnLeg' and 'commodityInterestLeg')."
+            },
+            {
+                "name": "commodityReturnLeg",
+                "type": "CommodityReturnLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the return payments of a commodity return swap. There can be one or two return legs. In simple return swaps there is a return leg and an interest (a.k.a. 'fee') leg. In the case of a outperformance swap there are two return legs: the return performance of two commodity underlyers are swapped. In the case of a fully-funded return swap there is no financing component and, therefore, only a single return leg is specified."
+            },
+            {
+                "name": "commoditySwap",
+                "type": "CommoditySwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines a commodity swap product."
+            },
+            {
+                "name": "commoditySwapLeg",
+                "type": "CommoditySwapLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines the substitutable commodity swap leg"
+            },
+            {
+                "name": "commoditySwaption",
+                "type": "CommoditySwaption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines a commodity swaption product"
+            },
+            {
+                "name": "commodityVarianceLeg",
+                "type": "CommodityVarianceLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the variance payments of a commodity variance swap."
+            },
+            {
+                "name": "electricityPhysicalLeg",
+                "type": "ElectricityPhysicalLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Physically settled electricity leg."
+            },
+            {
+                "name": "environmentalPhysicalLeg",
+                "type": "EnvironmentalPhysicalLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Physically settled environmental leg."
+            },
+            {
+                "name": "fixedLeg",
+                "type": "FixedPriceLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Fixed Price Leg."
+            },
+            {
+                "name": "floatingLeg",
+                "type": "FloatingPriceLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Floating Price leg."
+            },
+            {
+                "name": "gasPhysicalLeg",
+                "type": "GasPhysicalLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Physically settled natural gas leg."
+            },
+            {
+                "name": "metalPhysicalLeg",
+                "type": "MetalPhysicalLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Physically settled metal products leg."
+            },
+            {
+                "name": "oilPhysicalLeg",
+                "type": "OilPhysicalLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Physically settled oil or refined products leg."
+            }
+        ]
+    },
+    "fpml-confirmation-processes-5-12.xsd": {
+        "file": "fpml-confirmation-processes-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "requestExecution",
+                "type": "RequestExecution",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestExecutionRetracted",
+                "type": "RequestExecutionRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "executionNotification",
+                "type": "ExecutionNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "executionRetracted",
+                "type": "ExecutionRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "executionAcknowledgement",
+                "type": "EventRequestAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "executionException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "executionAdvice",
+                "type": "ExecutionAdvice",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "executionAdviceRetracted",
+                "type": "ExecutionAdviceRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "executionAdviceAcknowledgement",
+                "type": "EventRequestAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "executionAdviceException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "maturityNotification",
+                "type": "MaturityNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "maturityAcknowledgement",
+                "type": "EventRequestAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "maturityException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestTradeReferenceInformationUpdate",
+                "type": "RequestTradeReferenceInformationUpdate",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestTradeReferenceInformationUpdateRetracted",
+                "type": "RequestTradeReferenceInformationUpdateRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "tradeReferenceInformationUpdateAcknowledgement",
+                "type": "EventRequestAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "tradeReferenceInformationUpdateException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "tradeChangeAdvice",
+                "type": "TradeChangeAdvice",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "tradeChangeAdviceRetracted",
+                "type": "TradeChangeAdviceRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "tradeChangeAdviceAcknowledgement",
+                "type": "EventRequestAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "tradeChangeAdviceException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestConsent",
+                "type": "RequestConsent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestConsentRetracted",
+                "type": "RequestConsentRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "consentAcknowledgement",
+                "type": "EventRequestAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "consentException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "consentGranted",
+                "type": "ConsentGranted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "consentRefused",
+                "type": "ConsentRefused",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "approvalStatusNotification",
+                "type": "ApprovalStatusNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestConfirmation",
+                "type": "RequestConfirmation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The confirmation process starts with the requestConfirmation message. The message may be used to request the confirmation of a new trade or any other event supported by FpML such as novation, terminations, amendments, etc."
+            },
+            {
+                "name": "requestConfirmationRetracted",
+                "type": "ConfirmationRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A requestConfirmation message may be cancelled using the requestConfirmationRetracted message."
+            },
+            {
+                "name": "confirmationAcknowledgement",
+                "type": "EventRequestAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A business acknowledgement message to indicate that the previously sent message was sucessfully processed."
+            },
+            {
+                "name": "confirmationException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A message sent to inform another system that some exception has been detected."
+            },
+            {
+                "name": "confirmationStatus",
+                "type": "ConfirmationStatus",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The confirmationStatus message provides the status of the matching process: matched, mismatched, unmatched, or alleged. It may also provide the best fit trade(s) or event(s) as result of the matching process."
+            },
+            {
+                "name": "confirmationAgreed",
+                "type": "ConfirmationAgreed",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The confirmationAgreed message is sent when the matching process returns a proposed match (trade or event) and the Confirmation Requester agrees with it."
+            },
+            {
+                "name": "confirmationDisputed",
+                "type": "ConfirmationDisputed",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The confirmationDisputed message is sent when the matching process returns a proposed match (trade or event) and the Confirmation Requester disputes it."
+            },
+            {
+                "name": "requestClearing",
+                "type": "RequestClearing",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestClearingRetracted",
+                "type": "RequestClearingRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "clearingAcknowledgement",
+                "type": "EventRequestAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "clearingException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "clearingRefused",
+                "type": "ClearingRefused",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "clearingStatus",
+                "type": "ClearingStatus",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "clearingConfirmed",
+                "type": "ClearingConfirmed",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestAllocation",
+                "type": "RequestAllocation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestAllocationRetracted",
+                "type": "RequestAllocationRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "allocationAcknowledgement",
+                "type": "EventRequestAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "allocationException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "allocationRefused",
+                "type": "AllocationRefused",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "allocationApproved",
+                "type": "AllocationApproved",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestCollateralAllocation",
+                "type": "RequestCollateralAllocation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "collateralAllocationAcknowledgement",
+                "type": "Acknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "collateralAllocationRejected",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "collateralAllocationAccepted",
+                "type": "CollateralAllocationAccepted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "optionExpirationNotification",
+                "type": "ExecutionNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    },
+    "fpml-correlation-swaps-5-12.xsd": {
+        "file": "fpml-correlation-swaps-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "correlationSwap",
+                "type": "CorrelationSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the structure of a correlation swap."
+            }
+        ]
+    },
+    "fpml-credit-event-notification-5-12.xsd": {
+        "file": "fpml-credit-event-notification-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "bankruptcy",
+                "type": "BankruptcyEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "creditEvent",
+                "type": "CreditEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "creditEventNotice",
+                "type": "CreditEventNoticeDocument",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A global element used to hold CENs."
+            },
+            {
+                "name": "failureToPay",
+                "type": "FailureToPayEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "obligationAcceleration",
+                "type": "ObligationAccelerationEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "obligationDefault",
+                "type": "ObligationDefaultEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "repudiationMoratorium",
+                "type": "RepudiationMoratoriumEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "restructuring",
+                "type": "RestructuringEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "creditEventNotification",
+                "type": "CreditEventNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A message defining the ISDA defined Credit Event Notice. ISDA defines it as an irrevocable notice from a Notifying Party to the other party that describes a Credit Event that occurred. A Credit Event Notice must contain detail of the facts relevant to the determination that a Credit Event has occurred."
+            },
+            {
+                "name": "creditEventNotificationRetracted",
+                "type": "CreditEventNotificationRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A message retracting a previous credit event notification."
+            },
+            {
+                "name": "creditEventAcknowledgement",
+                "type": "Acknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "creditEventException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    },
+    "fpml-dividend-swaps-5-12.xsd": {
+        "file": "fpml-dividend-swaps-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "dividendSwapOptionTransactionSupplement",
+                "type": "DividendSwapOptionTransactionSupplement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the structure of the dividend swap transaction supplement."
+            },
+            {
+                "name": "dividendSwapTransactionSupplement",
+                "type": "DividendSwapTransactionSupplement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the structure of the dividend swap transaction supplement."
+            }
+        ]
+    },
+    "fpml-doc-5-12.xsd": {
+        "file": "fpml-doc-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "instrumentTradeDetails",
+                "type": "InstrumentTradeDetails",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A type to hold trades of multiply-traded instruments such as securities (e.g., stocks or bonds) or listed derivatives. Typically this will be used to represent the trade resulting from a physically-settled OTC product where the underlying is a security, for example the exercise of a physically-settled option."
+            },
+            {
+                "name": "strategy",
+                "type": "Strategy",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A strategy product."
+            }
+        ]
+    },
+    "fpml-enum-5-12.xsd": {
+        "file": "fpml-enum-5-12.xsd",
+        "rootElement": "Root",
+        "elements": []
+    },
+    "fpml-eq-shared-5-12.xsd": {
+        "file": "fpml-eq-shared-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "interestLeg",
+                "type": "InterestLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The fixed income amounts of the return type swap."
+            },
+            {
+                "name": "returnLeg",
+                "type": "ReturnLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Return amounts of the return type swap."
+            },
+            {
+                "name": "returnSwap",
+                "type": "ReturnSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the structure of a return type swap. It can represent return swaps, total return swaps, variance swaps."
+            },
+            {
+                "name": "returnSwapLeg",
+                "type": "DirectionalLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An placeholder for the actual Return Swap Leg definition."
+            }
+        ]
+    },
+    "fpml-eqd-5-12.xsd": {
+        "file": "fpml-eqd-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "brokerEquityOption",
+                "type": "BrokerEquityOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A component describing a Broker View of an Equity Option."
+            },
+            {
+                "name": "equityForward",
+                "type": "EquityForward",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A component describing an Equity Forward product."
+            },
+            {
+                "name": "equityOption",
+                "type": "EquityOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A component describing an Equity Option product."
+            },
+            {
+                "name": "equityOptionTransactionSupplement",
+                "type": "EquityOptionTransactionSupplement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A component describing an Equity Option Transaction Supplement."
+            }
+        ]
+    },
+    "fpml-fx-5-12.xsd": {
+        "file": "fpml-fx-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "fxDigitalOption",
+                "type": "FxDigitalOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An FX digital option transaction definition."
+            },
+            {
+                "name": "fxFlexibleForward",
+                "type": "FxFlexibleForward",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A flexible term fx forward product definition."
+            },
+            {
+                "name": "fxForwardVolatilityAgreement",
+                "type": "FxForwardVolatilityAgreement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An FX Forward Volatility Agreement transaction definition."
+            },
+            {
+                "name": "fxOption",
+                "type": "FxOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An FX option transaction definition."
+            },
+            {
+                "name": "fxSingleLeg",
+                "type": "FxSingleLeg",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A simple FX spot or forward transaction definition."
+            },
+            {
+                "name": "fxSwap",
+                "type": "FxSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An FX Swap transaction definition."
+            },
+            {
+                "name": "fxVarianceSwap",
+                "type": "FxPerformanceSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An FX variance swap transaction definition."
+            },
+            {
+                "name": "fxVolatilitySwap",
+                "type": "FxPerformanceSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An FX volatility swap transaction definition."
+            },
+            {
+                "name": "termDeposit",
+                "type": "TermDeposit",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A term deposit product definition."
+            },
+            {
+                "name": "calculationAgentDetermination",
+                "type": "FxDisruptionFallback",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Indicates that the Calculation Agent shall determine the Spot Rate (or a method for determining the Spot Rate) taking into consideration all available information that it reasonably and in good faith deems relevent."
+            },
+            {
+                "name": "dualExchangeRate",
+                "type": "FxDisruptionEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "If present indicates that the event is considered to have occured if two or more numeric values of currency exchange rate specified in the Settllement Option are applicable to the transaction."
+            },
+            {
+                "name": "exchangeRestrictions",
+                "type": "FxDisruptionEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "If present indicates that the event is considered to have occured if the settlement in either currency is prohibited or materially restricted."
+            },
+            {
+                "name": "fallbackReferencePrice",
+                "type": "FxFallbackReferencePrice",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "If present indicates alternative price sources"
+            },
+            {
+                "name": "fxDisruptionEvent",
+                "type": "FxDisruptionEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The abstract element used to create the extendible set of disruption events"
+            },
+            {
+                "name": "fxDisruptionFallback",
+                "type": "FxDisruptionFallback",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The abstract element used to create the extendible set of disruption fallbacks."
+            },
+            {
+                "name": "noFaultTermination",
+                "type": "FxDisruptionFallback",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Indicates that the event may cause the transaction to terminate if all applicable provisions have been met."
+            },
+            {
+                "name": "nonDeliverableSubstitute",
+                "type": "NonDeliverableSubstitute",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "If present indicates that the obligation to pay the In-the-Money amount of foreign currency is replaced with an obligation to pay an equivalent amount in another currency."
+            },
+            {
+                "name": "priceSourceDisruption",
+                "type": "FxDisruptionEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "If present indicates that the event is considered to have occurred if it is impossible to obtain information about the Spot Rate for a Valuation Date from the price source specified in the Settlement Rate Option that hass been agreed by the parties."
+            },
+            {
+                "name": "priceMateriality",
+                "type": "PriceMateriality",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Defines the require price materiality percentage for the rate source to be considered valid."
+            },
+            {
+                "name": "settlementPostponement",
+                "type": "Postponement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Indicates that the Settlement Date for the tranaction shall be deemed to be the first Business Day following the day on which the applicable Disruption Event ceases to exist, unless the events continues to exists for more than a maximum number of days."
+            },
+            {
+                "name": "valuationPostponement",
+                "type": "Postponement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Indicates that the Valuation Date for the tranaction shall be deemed to be the first Business Day following the day on which the applicable Disruption Event ceases to exist, unless the events continues to exists for more than a maximum number of days."
+            }
+        ]
+    },
+    "fpml-fx-accruals-5-12.xsd": {
+        "file": "fpml-fx-accruals-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "fxAccrualDigitalOption",
+                "type": "FxAccrualDigitalOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A structured option product which consists of a single digital option or a strip of digital options. At each settlement the settled amounts are a fraction of the notional amount for that settlement period calculated as the number of fixings which fall within accrual regions divided by the total number of fixings in the settlement period."
+            },
+            {
+                "name": "fxAccrualForward",
+                "type": "FxAccrualForward",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A structured forward product consisting of a single forward or a strip of forwards. For each forward, a fixed proportion of Notional is accumulated for each occasion that spot fixes within pre-defined limits (the 'accrual region') - the proportion determined by the number of fixings, which may occur every business day or with some other defined frequency. The Notional does not accumulate during any period where fixings fall outside the accrual region, but resumes accruing when spot returns within the limits. At expiry, the accrued Notional is bought at the pre-agreed hedge rate (the 'strike' rate). The trade allows for a hedge rate that is better than the forward rate, however the notional amount hedged is uncertain, and can be zero in the worst case."
+            },
+            {
+                "name": "fxAccrualOption",
+                "type": "FxAccrualOption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A financial contract between two parties (the buyer and the seller) that provides the buyer the right to buy a currency (or receive a payment) at expiry. The distinctive characteristic of this contract is that the Notional to be transacted at expiry is uncertain and depends on the amount of time that the underlying currency trades within a pre-set level, or levels (the 'accrual barrier', or 'barriers'). The total Notional is only known at the end of the accrual period, and this extra uncertainty can make an accrual option substantially cheaper than the comparable vanilla one."
+            },
+            {
+                "name": "fxRangeAccrual",
+                "type": "FxRangeAccrual",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A structured product which consists of a single cash payment or a strip of cash payments. At each settlement the settled amounts are a fraction of the notional amount for that settlement period calculated as the number of fixings which fall within accrual regions divided by the total number of fixings in the settlement period."
+            }
+        ]
+    },
+    "fpml-fx-targets-5-12.xsd": {
+        "file": "fpml-fx-targets-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "fxTargetKnockoutForward",
+                "type": "FxTargetKnockoutForward",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A structured forward product which consists of a strip of forwards. Each forward may be settled as an exchange of currencies or cash settled. At each settlement, the amount of gain that one party achieves is measured. The product has a target level of gain. Once the accumulated gain exceeds the target level, the product terminates and there are no further settlements."
+            }
+        ]
+    },
+    "fpml-generic-5-12.xsd": {
+        "file": "fpml-generic-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "genericProduct",
+                "type": "GenericProduct",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Generic products - for use in Transparency reporting to define a product that represents an OTC derivative transaction whose economics are not fully described using an FpML schema. In other views, generic products are present for convenience to support internal messaging and workflows that are cross-product. Generic products are not full trade representations as such they are not intended to be used for confirming trades."
+            }
+        ]
+    },
+    "fpml-ird-5-12.xsd": {
+        "file": "fpml-ird-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "bulletPayment",
+                "type": "BulletPayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A product to represent a single known payment."
+            },
+            {
+                "name": "capFloor",
+                "type": "CapFloor",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A cap, floor or cap floor structures product definition."
+            },
+            {
+                "name": "floatingRateCalculation",
+                "type": "FloatingRateCalculation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A floating rate calculation definition."
+            },
+            {
+                "name": "fra",
+                "type": "Fra",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A forward rate agreement product definition."
+            },
+            {
+                "name": "inflationRateCalculation",
+                "type": "InflationRateCalculation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An inflation rate calculation definition."
+            },
+            {
+                "name": "rateCalculation",
+                "type": "Rate",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The base element for the floating rate calculation definitions."
+            },
+            {
+                "name": "swap",
+                "type": "Swap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A swap product definition."
+            },
+            {
+                "name": "swaption",
+                "type": "Swaption",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A swaption product definition."
+            }
+        ]
+    },
+    "fpml-loan-5-12.xsd": {
+        "file": "fpml-loan-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "facilityGroup",
+                "type": "AbstractFacility",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Head of the substitution group for all facility types."
+            },
+            {
+                "name": "delayedDraw",
+                "type": "DelayedDraw",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A revolver facility."
+            },
+            {
+                "name": "letterOfCreditFacility",
+                "type": "LetterOfCreditFacility",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A letter of credit facility."
+            },
+            {
+                "name": "revolver",
+                "type": "Revolver",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A revolver facility."
+            },
+            {
+                "name": "termLoan",
+                "type": "TermLoan",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A term loan facility."
+            },
+            {
+                "name": "facilityEventGroup",
+                "type": "AbstractFacilityEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Head of the substitution group for all facility events."
+            },
+            {
+                "name": "accrualOptionChange",
+                "type": "AccrualOptionChange",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "accruingFeeChange",
+                "type": "AccruingFeeChange",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "accruingFeeExpiry",
+                "type": "AccruingFeeExpiry",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "accruingFeePayment",
+                "type": "AccruingFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "accruingPikPayment",
+                "type": "AccruingPikPayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "amendmentFeePayment",
+                "type": "AmendmentFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "commitmentAdjustment",
+                "type": "CommitmentAdjustment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "defaultRateChange",
+                "type": "DefaultRateChange",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "defaultRateExpiry",
+                "type": "DefaultRateExpiry",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "facilityExtensionFeePayment",
+                "type": "FacilityExtensionFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "facilityPrepayment",
+                "type": "FacilityPrepayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "facilityPrepaymentFeePayment",
+                "type": "FacilityPrepaymentFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "facilityTermination",
+                "type": "FacilityTermination",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "fundingFeePayment",
+                "type": "FundingFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "mandatoryCostRateChange",
+                "type": "MandatoryCostRateChange",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "mandatoryCostRateExpiry",
+                "type": "MandatoryCostRateExpiry",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "miscFeePayment",
+                "type": "MiscFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "penaltyRateChange",
+                "type": "PenaltyRateChange",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "penaltyRateExpiry",
+                "type": "PenaltyRateExpiry",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "upfrontFeePayment",
+                "type": "UpfrontFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "waiverFeePayment",
+                "type": "WaiverFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanContractEventGroup",
+                "type": "AbstractLoanServicingEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Head of the substitution group for all loan contract events."
+            },
+            {
+                "name": "loanContractAdjustment",
+                "type": "LoanContractAdjustment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "baseRateSet",
+                "type": "LoanContractBaseRateSet",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "borrowing",
+                "type": "Borrowing",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "breakageFeePayment",
+                "type": "BreakageFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "interestCapitalization",
+                "type": "InterestCapitalization",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "interestPayment",
+                "type": "LoanInterestPayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "legacyInterestCapitalization",
+                "type": "LegacyInterestCapitalization",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "legacyInterestPayment",
+                "type": "LegacyLoanInterestPayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "maturityChange",
+                "type": "LoanContractMaturityChange",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "repayment",
+                "type": "Repayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "rollover",
+                "type": "Rollover",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "lcEventGroup",
+                "type": "AbstractLcEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Head of the substitution group for all letter of credit events."
+            },
+            {
+                "name": "lcAdjustment",
+                "type": "LcAdjustment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "lcFxRevaluation",
+                "type": "LcFxRevaluation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "lcIssuance",
+                "type": "LcIssuance",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "lcIssuanceFeePayment",
+                "type": "LcIssuanceFeePayment",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "lcRateChange",
+                "type": "LcRateChange",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "lcRenewal",
+                "type": "LcRenewal",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "lcTermination",
+                "type": "LcTermination",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanTradeEventGroup",
+                "type": "AbstractLoanTradeEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Head of the substitution group for all loan trade events."
+            },
+            {
+                "name": "loanTrade",
+                "type": "LoanTradeEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanTradeConfirmation",
+                "type": "LoanTradeEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanTradeFeeDue",
+                "type": "LoanTradeTransferFeeDue",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanTradeFeeOwed",
+                "type": "LoanTradeTransferFeeOwed",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanAllocationEventGroup",
+                "type": "AbstractLoanAllocationEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Head of the substitution group for all loan trade allocation events."
+            },
+            {
+                "name": "loanAllocation",
+                "type": "LoanAllocationEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanAllocationConfirmation",
+                "type": "LoanAllocationEvent",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanAllocationSettlement",
+                "type": "LoanAllocationSettlement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanAllocationFeeDue",
+                "type": "LoanAllocationTransferFeeDue",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanAllocationFeeOwed",
+                "type": "LoanAllocationTransferFeeOwed",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanAllocationSettlementDateAvailability",
+                "type": "LoanAllocationSettlementDateAvailability",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanAllocationSettlementDateFinalization",
+                "type": "LoanAllocationSettlementDateFinalization",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanBulkServicingNotification",
+                "type": "LoanBulkServicingNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanNotificationAcknowledgement",
+                "type": "LoanNotificationAcknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanNotificationException",
+                "type": "LoanNotificationException",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanNotificationRetracted",
+                "type": "LoanNotificationRetracted",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanPartyProfileStatement",
+                "type": "LoanPartyProfileStatement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanCovenantObligationNotification",
+                "type": "LoanCovenantObligationNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "facilityNotification",
+                "type": "FacilityNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "lcNotification",
+                "type": "LcNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanContractNotification",
+                "type": "LoanContractNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanLegalActionNotification",
+                "type": "LoanLegalActionNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanAllocationNotification",
+                "type": "LoanAllocationNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanTradeNotification",
+                "type": "LoanTradeNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "dealStatement",
+                "type": "DealStatement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "facilityStatement",
+                "type": "FacilityStatement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "facilityPositionStatement",
+                "type": "FacilityPositionStatement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "loanLegalActionStatement",
+                "type": "LoanLegalActionStatement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "outstandingContractsStatement",
+                "type": "OutstandingContractsStatement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    },
+    "fpml-main-5-12.xsd": {
+        "file": "fpml-main-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "dataDocument",
+                "type": "DataDocument",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A document containing trade and/or portfolio and/or party data without expressing any processing intention."
+            },
+            {
+                "name": "valuationDocument",
+                "type": "ValuationDocument",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "A document that includes trade and/or valuation (pricing and risk) data without expressing any processing intention."
+            }
+        ]
+    },
+    "fpml-mktenv-5-12.xsd": {
+        "file": "fpml-mktenv-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "creditCurve",
+                "type": "CreditCurve",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "creditCurveValuation",
+                "type": "CreditCurveValuation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "fxCurve",
+                "type": "FxCurve",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "fxCurveValuation",
+                "type": "FxCurveValuation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "volatilityMatrixValuation",
+                "type": "VolatilityMatrix",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "volatilityRepresentation",
+                "type": "VolatilityRepresentation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "yieldCurve",
+                "type": "YieldCurve",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "yieldCurveValuation",
+                "type": "YieldCurveValuation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    },
+    "fpml-msg-5-12.xsd": {
+        "file": "fpml-msg-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "eventStatusResponse",
+                "type": "EventStatusResponse",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "eventStatusException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "messageRejected",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The root element used for rejected message exceptions"
+            },
+            {
+                "name": "serviceNotification",
+                "type": "ServiceNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "serviceNotificationException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestEventStatus",
+                "type": "RequestEventStatus",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "requestRetransmission",
+                "type": "RequestRetransmission",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "verificationStatusNotification",
+                "type": "VerificationStatusNotification",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "verificationStatusException",
+                "type": "Exception",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "verificationStatusAcknowledgement",
+                "type": "Acknowledgement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    },
+    "fpml-option-shared-5-12.xsd": {
+        "file": "fpml-option-shared-5-12.xsd",
+        "rootElement": "Root",
+        "elements": []
+    },
+    "fpml-reg-reporting-shared-5-12.xsd": {
+        "file": "fpml-reg-reporting-shared-5-12.xsd",
+        "rootElement": "Root",
+        "elements": []
+    },
+    "fpml-repo-5-12.xsd": {
+        "file": "fpml-repo-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "repo",
+                "type": "Repo",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Global element representing a Repo."
+            }
+        ]
+    },
+    "fpml-return-swaps-5-12.xsd": {
+        "file": "fpml-return-swaps-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "equitySwapTransactionSupplement",
+                "type": "EquitySwapTransactionSupplement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the structure of the equity swap transaction supplement."
+            }
+        ]
+    },
+    "fpml-riskdef-5-12.xsd": {
+        "file": "fpml-riskdef-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "market",
+                "type": "Market",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "This is a global element used for creating global types. It holds Market information, e.g. curves, surfaces, quotes, etc."
+            },
+            {
+                "name": "pricingStructure",
+                "type": "PricingStructure",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "pricingStructureValuation",
+                "type": "PricingStructureValuation",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    },
+    "fpml-sec-lending-5-12.xsd": {
+        "file": "fpml-sec-lending-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "securityLending",
+                "type": "SecurityLending",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Global element representing a Security Lending transaction."
+            }
+        ]
+    },
+    "fpml-shared-5-12.xsd": {
+        "file": "fpml-shared-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "americanExercise",
+                "type": "AmericanExercise",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The parameters for defining the exercise period for an American style option together with any rules governing the notional amount of the underlying which can be exercised on any given exercise date and any associated exercise fees."
+            },
+            {
+                "name": "bermudaExercise",
+                "type": "BermudaExercise",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The parameters for defining the exercise period for a Bermuda style option together with any rules governing the notional amount of the underlying which can be exercised on any given exercise date and any associated exercise fees."
+            },
+            {
+                "name": "europeanExercise",
+                "type": "EuropeanExercise",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "The parameters for defining the exercise period for a European style option together with any rules governing the notional amount of the underlying which can be exercised on any given exercise date and any associated exercise fees."
+            },
+            {
+                "name": "exercise",
+                "type": "Exercise",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An placeholder for the actual option exercise definitions."
+            },
+            {
+                "name": "product",
+                "type": "Product",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "An abstract element used as a place holder for the substituting product elements."
+            }
+        ]
+    },
+    "fpml-standard-5-12.xsd": {
+        "file": "fpml-standard-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "standardProduct",
+                "type": "StandardProduct",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Deprecated: Standard product - for use in Transparency reporting to define a product that represents a standardized OTC derivative transaction whose economics do not need to be fully described using an FpML schema because they are implied by the product ID. In other views, standard products are present for convenience to support internal messaging and workflows that are cross-product. Standard products are not full trade representations as such they are not intended to be used for confirming trades."
+            }
+        ]
+    },
+    "fpml-valuation-5-12.xsd": {
+        "file": "fpml-valuation-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "valuationSet",
+                "type": "ValuationSet",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    },
+    "fpml-variance-swaps-5-12.xsd": {
+        "file": "fpml-variance-swaps-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "varianceOptionTransactionSupplement",
+                "type": "VarianceOptionTransactionSupplement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the structure of a variance option."
+            },
+            {
+                "name": "varianceSwap",
+                "type": "VarianceSwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the structure of a variance swap."
+            },
+            {
+                "name": "varianceSwapTransactionSupplement",
+                "type": "VarianceSwapTransactionSupplement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the structure of a variance swap transaction supplement."
+            }
+        ]
+    },
+    "fpml-volatility-swaps-5-12.xsd": {
+        "file": "fpml-volatility-swaps-5-12.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "volatilitySwap",
+                "type": "VolatilitySwap",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": [],
+                "documentation": "Specifies the structure of a volatility swap."
+            },
+            {
+                "name": "volatilitySwapTransactionSupplement",
+                "type": "VolatilitySwapTransactionSupplement",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    },
+    "xmldsig-core-schema.xsd": {
+        "file": "xmldsig-core-schema.xsd",
+        "rootElement": "Root",
+        "elements": [
+            {
+                "name": "Signature",
+                "type": "ds:SignatureType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "SignatureValue",
+                "type": "ds:SignatureValueType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "SignedInfo",
+                "type": "ds:SignedInfoType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "CanonicalizationMethod",
+                "type": "ds:CanonicalizationMethodType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "SignatureMethod",
+                "type": "ds:SignatureMethodType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "Reference",
+                "type": "ds:ReferenceType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "Transforms",
+                "type": "ds:TransformsType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "Transform",
+                "type": "ds:TransformType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "DigestMethod",
+                "type": "ds:DigestMethodType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "DigestValue",
+                "type": "ds:DigestValueType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "KeyInfo",
+                "type": "ds:KeyInfoType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "KeyName",
+                "type": "string",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "MgmtData",
+                "type": "string",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "KeyValue",
+                "type": "ds:KeyValueType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "RetrievalMethod",
+                "type": "ds:RetrievalMethodType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "X509Data",
+                "type": "ds:X509DataType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "PGPData",
+                "type": "ds:PGPDataType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "SPKIData",
+                "type": "ds:SPKIDataType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "Object",
+                "type": "ds:ObjectType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "Manifest",
+                "type": "ds:ManifestType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "SignatureProperties",
+                "type": "ds:SignaturePropertiesType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "SignatureProperty",
+                "type": "ds:SignaturePropertyType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "DSAKeyValue",
+                "type": "ds:DSAKeyValueType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            },
+            {
+                "name": "RSAKeyValue",
+                "type": "ds:RSAKeyValueType",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "attributes": {},
+                "children": []
+            }
+        ]
+    }
+}
