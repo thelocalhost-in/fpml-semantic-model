@@ -29,8 +29,19 @@ jobs:
       - name: Build release distributions
         run: |
           # NOTE: put your own distribution build steps here.
+          python -m pip install --upgrade pip
+          pip install wheel setuptools twine
+          pip install -r requirements.txt || true # Install runtime requirements if defined
+          # Explicitly install packages from setup.py to ensure all ML dependencies are met
+          pip install numpy torch transformers sentence-transformers
           python -m pip install build
           python -m build
+
+      # Step 2: Build the source distribution and wheel
+      - name: Build sdist and wheel
+        run: python setup.py sdist bdist_wheel
+        # Note: If you get a build error, it might be related to torch/numpy compilation;
+        # ensure your 'all_xsd_data.json' is accessible for the build process.
 
       - name: Upload distributions
         uses: actions/upload-artifact@v4
@@ -74,3 +85,14 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
+
+      # Step 3: Publish to PyPI
+      # This step uses the official PyPI action for secure uploading
+      - name: Publish package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          # This secret must be created in your GitHub Repository settings
+          # and must contain the token generated on the live PyPI site (https://pypi.org/)
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          # Use Twine to upload all files in the dist/ folder
+          # repository-url: (defaults to PyPI production)
