@@ -1,0 +1,31 @@
+name: Debug PyPI Trusted Publisher
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  show-oidc-claims:
+    name: Debug Trusted Publisher Claims
+    runs-on: ubuntu-latest
+    environment: pypi # Must match your PyPI trusted publisher environment name
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch OIDC token
+        id: oidc
+        run: |
+          echo "Requesting GitHub OIDC token for PyPI..."
+          TOKEN=$(curl -sSL -H "Authorization: Bearer $(curl -sSL -X POST -H 'Accept: application/json' -H 'Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN' '${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=pypi' | jq -r .value)")
+          echo "OIDC_TOKEN=${TOKEN}" >> $GITHUB_ENV
+          echo "Token retrieved."
+
+      - name: Decode token claims
+        run: |
+          echo "Decoding JWT header and payload..."
+          echo "$OIDC_TOKEN" | awk -F. '{print $2}' | base64 --decode | jq

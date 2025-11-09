@@ -71,6 +71,17 @@ jobs:
       # url: https://pypi.org/project/YOURPROJECT/${{ github.event.release.name }}
 
     steps:
+      - name: Debug OIDC token
+        run: |
+          echo "=== FETCHING ID TOKEN ==="
+          echo "${{ steps.id_token.outputs.token }}"
+        id: id_token
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const token = await core.getIDToken('pypi');
+            core.setOutput('token', token);
+
       - name: Retrieve release distributions
         uses: actions/download-artifact@v4
         with:
