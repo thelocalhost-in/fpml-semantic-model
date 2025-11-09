@@ -6,13 +6,19 @@ from typing import Dict, Any, List
 # 1. FPML STRUCTURAL MODEL (Structural Analysis and XML Generation)
 # ----------------------------------------------------------------------
 
+DEFAULT_FPML_XSD_JSON_DATA = "all_xsd_data.json"
+DEFAULT_EMBEDDINGS_JSON_DATA = "generated_embeddings.json"
+
 class FpMLBaseModel:
     """
     Analyzes FpML XSD structure, provides structured data access, and 
     generates minimal XML message snippets.
     """
-    def __init__(self, file_path: str):
-        self.file_path = file_path
+    def __init__(self, file_path: str=None):
+        if file_path is None:
+            self.file_path = DEFAULT_FPML_XSD_JSON_DATA
+        else:
+            self.file_path = file_path
         self.data: Dict[str, Any] = self._build_model()
 
     def _build_model(self) -> Dict[str, Any]:
