@@ -1,6 +1,0 @@
-README.md
-setup.py
-fpml_semantic_model.egg-info/PKG-INFO
-fpml_semantic_model.egg-info/SOURCES.txt
-fpml_semantic_model.egg-info/dependency_links.txt
-fpml_semantic_model.egg-info/top_level.txt
