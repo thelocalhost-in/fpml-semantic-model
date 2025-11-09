@@ -2,19 +2,18 @@ import json
 import sys
 from typing import Dict, Any, List
 
+# ----------------------------------------------------------------------
+# 1. FPML STRUCTURAL MODEL (Structural Analysis and XML Generation)
+# ----------------------------------------------------------------------
+
 class FpMLBaseModel:
     """
-    A publishable class for analyzing FpML XSD structure and generating 
-    template FpML XML messages.
+    Analyzes FpML XSD structure, provides structured data access, and 
+    generates minimal XML message snippets.
     """
     def __init__(self, file_path: str):
-        """Initializes the model by loading and processing the consolidated XSD JSON data."""
         self.file_path = file_path
         self.data: Dict[str, Any] = self._build_model()
-        
-        # Define standard FpML XML boilerplate
-        self.fpml_ns = 'http://www.fpml.org/FpML-5/confirmation'
-        self.xsd_prefix = '{http://www.w3.org/2001/XMLSchema}'
 
     def _build_model(self) -> Dict[str, Any]:
         """Loads and processes XSD data into the comprehensive lookup dictionary."""
@@ -29,26 +28,23 @@ class FpMLBaseModel:
         
         for xsd_file, content in xsd_data.items():
             
+            # Helper to process both top-level elements and complex type children
+            def process_element_list(elements: List[Dict], location_type: str, type_doc: str = ''):
+                for element in elements:
+                    tag_name = element.get('name')
+                    if tag_name and tag_name not in model:
+                        model[tag_name] = self._extract_details(element, xsd_file, location_type, type_doc)
+
             # A. Process Top-Level Elements
-            for element in content.get('elements', []):
-                tag_name = element.get('name')
-                if not tag_name or tag_name in model:
-                    continue
-                model[tag_name] = self._extract_details(element, xsd_file, 'Top-Level Element')
+            process_element_list(content.get('elements', []), 'Top-Level Element')
 
             # B. Process Complex Types (for nested fields)
             for type_def in content.get('complexTypes', []):
                 type_name = type_def.get('name')
                 type_doc = type_def.get('documentation', 'No description available for complex type.')
-                
-                for child in type_def.get('children', []):
-                    child_name = child.get('name')
-                    if child_name and child_name not in model:
-                        model[child_name] = self._extract_details(
-                            child, xsd_file, f'Child of {type_name}', type_doc=type_doc
-                        )
+                process_element_list(type_def.get('children', []), f'Child of {type_name}', type_doc)
 
-        print(f"✅ Model built successfully. Total unique tags indexed: {len(model)}")
+        print(f"✅ FpML Structural Model built. Total unique tags indexed: {len(model)}")
         return model
 
     def _extract_details(self, element: Dict, xsd_file: str, location: str, type_doc: str = '') -> Dict:
@@ -59,11 +55,13 @@ class FpMLBaseModel:
             'description': element.get('documentation', type_doc or 'No description available'),
             'attributes': element.get('attributes', {}),
             'children': element.get('children', []),
+            'minOccurs': element.get('minOccurs', '1'), # Include minOccurs for XML generation
+            'maxOccurs': element.get('maxOccurs', '1'), # Include maxOccurs for XML generation
             'location_type': location
         }
 
     def lookup_tag(self, tag_name: str) -> Dict[str, Any]:
-        """Retrieves structured details for a given FpML tag name."""
+        """Retrieves structured details for a given FpML tag name (Exact Match)."""
         details = self.data.get(tag_name)
         if details:
             return {
@@ -76,98 +74,115 @@ class FpMLBaseModel:
                 'Children Count': len(details.get('children', [])),
                 'Children Sample (First 2)': details.get('children', [])[:2]
             }
-        return {"status": f"Tag '{tag_name}' not found in the FpML Base Model."}
+        return {"status": f"Tag '{tag_name}' not found in the Base Model."}
 
-    def _build_xml_recursively(self, tag_name: str, depth: int, max_depth: int) -> str:
-        """Recursively builds a template XML fragment."""
-        if depth > max_depth:
-            return ""
+    # --- XML Generation Methods ---
 
+    def _generate_xml_snippet(self, tag_name: str, indent: int) -> str:
+        """
+        Recursively generates a minimal XML snippet for a given tag and its required children.
+        Only includes elements where minOccurs >= 1.
+        """
         details = self.data.get(tag_name)
         if not details:
             return ""
 
-        indent = "  " * depth
+        padding = "    " * indent
         
-        # 1. Start Tag and Attributes
-        attr_str = ""
-        for attr_name, attr_details in details.get('attributes', {}).items():
-            # Add a mock value for required attributes
-            if attr_details.get('use') == 'required':
-                attr_str += f' {attr_name}="VALUE_REQUIRED"'
+        # 1. Check if this element is a simple type (no complex children)
+        children = details.get('children', [])
+        is_complex = bool(children)
         
-        xml_fragment = f"{indent}<{tag_name}{attr_str}>"
-        
-        # 2. Add Content or Children
-        if details.get('data_type') not in ['N/A', None] and not details.get('children'):
-            # If it's a simple type (leaf node), add a placeholder value
-            xml_fragment += f"PLACEHOLDER_{details.get('data_type')}"
-        elif details.get('children'):
-            xml_fragment += "\n"
-            # Recursively add children
-            for child in details['children']:
-                # Use minOccurs/maxOccurs to decide which children to include, here we include all defined children
+        # 2. Generate content recursively for required children
+        inner_content = ""
+        if is_complex:
+            for child in children:
                 child_name = child.get('name')
-                xml_fragment += self._build_xml_recursively(child_name, depth + 1, max_depth)
-            
-            # Close the tag only after children
-            xml_fragment += f"{indent}</{tag_name}>"
+                min_occurs = child.get('minOccurs', '0')
+                
+                # Only include elements that are required (minOccurs >= 1) for a minimal message
+                if int(min_occurs) >= 1:
+                    inner_content += self._generate_xml_snippet(child_name, indent + 1)
+
+        # 3. Determine the content/placeholder for the current tag
+        if inner_content:
+            # If complex and has required children, the content is the recursive output
+            content = '\n' + inner_content + padding
+            return f"{padding}<{tag_name}>{content}</{tag_name}>\n"
+        
         else:
-            # Handle empty tags or complex types with no children listed
-            xml_fragment += f"</{tag_name}>"
+            # If complex but no required children, or if a simple type, use a placeholder
+            data_type = details.get('data_type', 'xs:string')
+            if 'Enum' in data_type:
+                placeholder = f"ENUM_VALUE_FROM_{data_type}"
+            else:
+                placeholder = f"'{data_type}_VALUE'"
+            
+            return f"{padding}<{tag_name}>{placeholder}</{tag_name}>\n"
 
 
-        # Handle self-closing tags if no content or children are generated
-        if "PLACEHOLDER" in xml_fragment or xml_fragment.strip().endswith(f"</{tag_name}>"):
-            return xml_fragment.strip() if "\n" not in xml_fragment else xml_fragment
+    def generate_xml_message(self, root_tag: str, namespace: str = "http://www.fpml.org/FpML-5/confirmation") -> Dict[str, str]:
+        """
+        Generates a minimal, valid XML message snippet for the given root FpML tag.
+        
+        Args:
+            root_tag (str): The top-level FpML tag name (e.g., 'requestTradeConfirm').
+            namespace (str): The FpML namespace to use (default for FpML-5).
+            
+        Returns:
+            Dict[str, str]: Dictionary containing the generated XML and status.
+        """
+        details = self.data.get(root_tag)
+        if not details or details.get('location_type') != 'Top-Level Element':
+            return {"status": f"Root tag '{root_tag}' not found or is not a top-level message element."}
 
-        # Default close for non-leaf nodes
-        return f"{xml_fragment}\n{indent}</{tag_name}>"
+        # Recursively generate content, starting at indent 1
+        content = self._generate_xml_snippet(root_tag, 1).strip()
+        
+        # Add XML declaration and namespace
+        full_xml = f"""<?xml version="1.0" encoding="utf-8"?>
+<{root_tag} xmlns="{namespace}">
+{content}
+</{root_tag}>
+"""
+        return {"xml_snippet": full_xml}
+
+
+# ----------------------------------------------------------------------
+# 2. EXECUTION AND DEMONSTRATION (Structural Only)
+# ----------------------------------------------------------------------
+
+if __name__ == "__main__":
     
+    # The file "all_xsd_data.json" is required to run the model
+    FPML_FILE_PATH = "all_xsd_data.json"
+    
+    # 1. Initialize the FpML Base Model
+    fpml_base_model = FpMLBaseModel(file_path=FPML_FILE_PATH)
+    
+    # --- Demo Queries ---
+    tags_to_lookup = [
+        "bond",
+        "requestConfirmation", # A specific loan tag from one of the XSD files
+        "nonExistentTag"
+    ]
 
-    def generate_message(self, root_tag: str, max_depth: int = 3) -> str:
-        """
-        Generates a template FpML XML message starting with the specified root_tag.
+    print("\n" + "="*80)
+    print("FpML STRUCTURAL LOOKUP DEMONSTRATION")
+    print("="*80)
+
+    for tag in tags_to_lookup:
         
-        Parameters:
-            root_tag (str): The top-level FpML element (e.g., 'bond', 'requestEventStatus').
-            max_depth (int): The maximum depth to traverse the structure for simplicity.
-        """
-        if root_tag not in self.data:
-            return f"Error: Root tag '{root_tag}' not found in the Base Model."
-
-        # Start the XML document with FpML wrapper
-        xml_output = [
-            '<?xml version="1.0" encoding="utf-8"?>',
-            f'<{'fpml'}:{'dataDocument'} xmlns:{'fpml'}="{self.fpml_ns}" version="5-12">'
-        ]
+        # Perform Structural Lookup
+        tag_details = fpml_base_model.lookup_tag(tag)
         
-        # 1. Build the root structure recursively
-        content = self._build_xml_recursively(root_tag, 1, max_depth)
-        xml_output.append(content)
-
-        # 2. Close the FpML wrapper
-        xml_output.append(f'</{'fpml'}:{'dataDocument'}>')
-
-        return "\n".join(xml_output)
-
-# ----------------------------------------------------------------------
-# DEMONSTRATION
-# ----------------------------------------------------------------------
-
-# Initialize the published model
-fpml_model = FpMLBaseModel(file_path="all_xsd_data.json")
-
-# --- Step 1: Look up the tag structure ---
-print("\n" + "="*70)
-print("Demo 1: Structural Lookup for 'requestConfirmation'")
-print("="*70)
-bond_structure = fpml_model.lookup_tag('requestConfirmation')
-print(json.dumps(bond_structure, indent=4))
-
-# --- Step 2: Generate FpML Message Template (using 'bond' as the message type) ---
-print("\n" + "="*70)
-print("Demo 2: FpML Message Generation for 'requestConfirmation'")
-print("="*70)
-bond_message_template = fpml_model.generate_message(root_tag='requestConfirmation', max_depth=3)
-print(bond_message_template)
+        # Display Results
+        print("\n" + "-"*80)
+        print(f"LOOKUP: {tag}")
+        print("-"*80)
+        
+        if 'status' in tag_details:
+            print(tag_details['status'])
+        else:
+            for key, value in tag_details.items():
+                print(f"  {key}: {value}")

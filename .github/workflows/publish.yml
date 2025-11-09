@@ -32,8 +32,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install wheel setuptools twine
           pip install -r requirements.txt || true # Install runtime requirements if defined
-          # Explicitly install packages from setup.py to ensure all ML dependencies are met
-          pip install numpy torch transformers sentence-transformers
           python -m pip install build
           python -m build
 

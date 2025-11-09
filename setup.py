@@ -7,7 +7,7 @@ def read(fname):
 
 setup(
     name='fpml-semantic-model',
-    version='v0.1.7',
+    version='v0.1.9',
     author='thelocalhost-in',
     author_email='thelocalhost.in@gmail.com',
     description='A semantic search and structural analysis model for FpML XSD schemas.',
@@ -29,11 +29,7 @@ setup(
     ],
     keywords='fpml xsd xml finance machine-learning semantic-search',
     install_requires=[
-        'numpy>=1.20.0',
         # Core ML dependencies for the SemanticSearchModel
-        'sentence-transformers>=2.2.2',
-        'torch>=1.12.0', # Required by sentence-transformers
-        'transformers>=4.0.0', # Required by sentence-transformers
     ],
     # Include non-code files (like your all_xsd_data.json)
     package_data={
